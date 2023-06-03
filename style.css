@@ -1,0 +1,124 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+.gift-box::before{
+    content: '';
+    background-image: url("faiza.jpeg" );
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.35;
+}
+.gift-container{
+    position:relative;
+}
+.gift-container::before{
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    top: 90px;
+    left: -10px;
+}
+.gift{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-color: red;
+}
+.gift::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    background-color: goldenrod;
+    left: 62px;
+}
+.gift::after{
+    content: '';
+    position: absolute;
+    box-shadow:inset rgba(0, 0, 0, 0.3) ;
+    width: 150px;
+    height: 100px;
+}
+#click{
+    display: none;
+}
+.click{
+    position: absolute;
+    background-color: goldenrod;
+    width: 170px;
+    height: 40px;
+    top: -40px;
+    left: -10px;
+    transform-origin: bottom left;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.click::before{
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 40px;
+    background-color: goldenrod;
+    left: 72px;
+}
+.click::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 0;
+    border-bottom: 30px solid goldenrod;
+    border-top: 30px solid goldenrod ;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotate(-90deg);
+    left: 65px;
+    top: -47px;
+}
+#click:checked+.click{
+    transform: rotate(-110deg) scale(0.85);
+}
+#click:checked~.wish{
+    transform: translateY(-120px);
+}
+.wish{
+    position: absolute;
+    transition: .5s;
+    color: #333;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: -1;
+    left: 10px;
+    color: rgb(2, 248, 215);
+    text-shadow: 0 0 10px #020202;
+
+}
+
+@media screen and (min-width:300px) and (max-width:992px){
+    body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+    }
+}
